@@ -1,0 +1,127 @@
+/* ROOT */
+
+:root {
+    --primary-dark-cyan: hsl(185, 75%, 39%);
+    --primary-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --primary-dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --neutral-dark-gray: hsl(0, 0%, 59%);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERIC STYLES */
+
+/* BODY */
+
+body {
+    font-size:  18px;
+    font-family: "Kumbh Sans", sans-serif;
+    background-color: var(--primary-dark-cyan);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 41vh right 52vw, top 41vh left 45vw;
+    /* reversed the position of the top bg image from top left -> bottom right in order to make it stayed in that position when screen sizes changed.  same for the bottom bg. */
+}
+
+h1 {
+    font-size: 1em;
+    color: var(--primary-very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 0.8em;
+    color: var(--primary-dark-grayish-blue);
+    font-weight: 400;
+}
+
+p {
+    font-size: 0.55em;
+    color: var(--primary-dark-grayish-blue);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.container { 
+    background-color: white;
+    width: 18.1em;
+    margin: 8.13em auto;
+    border-radius: 1em;
+    overflow: hidden;
+}  
+
+.profile-pic {
+    height: 7.7em;
+    background-image: url(./images/bg-pattern-card.svg);
+    text-align: center;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    border: 0.35em solid white;
+    margin-top: 4.7em;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 4em;
+    padding-bottom: 1.32em;
+    border-bottom: 0.1em solid hsl(225,10%,92%);
+}
+
+.profile-info h1 {
+    margin-bottom: 0.45em;
+}
+
+.profile-info span {
+    margin-left: 0.5em;
+    color: var(--primary-dark-grayish-blue);
+    font-weight: 400;
+}
+
+.stats {
+    margin: 1.3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inner-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category {
+    letter-spacing: 0.2em;
+    margin-top: 0.34em;
+}
+
+/* FOOTER */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 767px) {
+    .container {
+        margin: 9.6em auto;
+    }   
+}
+
+@media screen and (max-width: 374px) {
+    .container {
+        width: 90%;
+    }
+    
+}
+
